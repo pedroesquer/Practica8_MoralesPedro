@@ -1,0 +1,124 @@
+:root{
+    --background: #121212;
+    --off-white: #b3b3b3;
+    --dark-gray: #181818;
+    --light-gray: #282828;
+    --spotify-green: #1DB954;
+    --gray: #1f1f1f
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--background);
+    color: white;
+    font-family: 'Helvetica Neue', sans-serif;
+    height: 100vh;
+}
+.container{
+    display: flex;
+    width: 100%;
+}
+
+main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.playlist-header{
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.playlist-cover{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.playlist-info h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.playlist-desc{
+    color: var(--off-white);
+    margin-top: 10px;
+    font-size: 0.875rem;
+}
+
+.controls{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 25px 0;
+}
+
+.play-button{
+    background-color: var(--spotify-green);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.like-button, .download-button{
+    background: none;
+    border: none;
+    color: var(--off-white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.download-button img, .like-button{
+   background: none;
+   border: none;
+   cursor: pointer;
+}
+
+.download-button img, .like-button img{
+    width: 22px;
+    filter: invert(1);
+}
+
+.songs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.songs-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background-color: var(--gray);
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 8px;
+}
+
+.songs-row{
+    border-radius: 4px;
+    transition: backgroud 0.2s;
+}
+
+.songs-row:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
